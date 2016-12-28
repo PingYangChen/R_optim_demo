@@ -72,6 +72,7 @@ licence.
 
 #include "lbfgs.h"
 
+// Ping-Yang Chen: including Rcpp.h makes the library works for Rcpp environment. (Dec. 28th, 2016)
 #include <Rcpp.h>
 
 #ifdef  _MSC_VER
