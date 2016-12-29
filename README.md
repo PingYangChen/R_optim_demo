@@ -9,10 +9,10 @@ Three objective functions are used here which is controlled by `funIdx` in `objf
 + `funIdx = 2`: Sphere function (n dimensional problem)
 
 Four coding methods are demonstrated.
-+ Regular `optim` function with objective function written in *R*.
-+ Regular `optim` function with objective function written in *C++*.
-+ Optimization using *Rcpp* and `optim` *C* interfaces (defined in header R_ext/Applic.h).  I only used three of the interfaces.  There are more and the coding is similar.  For more information, please refre to
++ Regular `optim` function with objective function written in **R**.
++ Regular `optim` function with objective function written in **C++**.
++ Optimization using **Rcpp** and `optim` **C** interfaces (defined in header R_ext/Applic.h).  I only used three of the interfaces.  There are more and the coding is similar.  For more information, please refre to
 https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Optimization.
-+ Optimization using *Rcpp* and *libLBFGS* library.  To make the library available, please put `#include<Rcpp.h>` in the file *lbfgsKernel.c*.
++ Optimization using **Rcpp** and **libLBFGS** library.  To make the library available for **Rcpp**, please put `#include<Rcpp.h>` in the file **lbfgsKernel.c**.
 
 Thanks to the open source library, libLBFGS, provided by Naoaki Okazaki (http://www.chokkan.org/software/liblbfgs/)
