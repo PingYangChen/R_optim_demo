@@ -68,9 +68,10 @@ List optim_cpp(NumericVector iniVal, int funIdx, std::string method, int maxit,
 	    &ex, factr, pgtol, &fncount, &grcount, maxit, msg, trace, nREPORT);
 			
 	}
-	for (int i = 0; i < n; i++) iniVal(i) = par[i];
+	Rcpp::NumericVector outPar(n);
+	for (int i = 0; i < n; i++) outPar(i) = par[i];
 	
-	return List::create(Named("par") = wrap(iniVal),
+	return List::create(Named("par") = wrap(outPar),
                       Named("value") = wrap(Fmin),
                       Named("conv") = wrap(fail));
 }
@@ -95,11 +96,12 @@ List optim_cpp_lbfgs(NumericVector iniVal, int funIdx)
   int ret;
   ret = lbfgs(n, par, &fx, evaluate, NULL, &ex, &LBFGS_PAR);
 	
-	for (int i = 0; i < n; i++) iniVal[i] = par[i];
+	Rcpp::NumericVector outPar(n);
+	for (int i = 0; i < n; i++) outPar(i) = par[i];
 	
 	lbfgs_free(par);
 	
-	return List::create(Named("par") = wrap(iniVal),
+	return List::create(Named("par") = wrap(outPar),
                       Named("value") = wrap(fx),
                       Named("conv") = wrap(ret));
 }
