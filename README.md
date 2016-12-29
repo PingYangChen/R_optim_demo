@@ -16,6 +16,7 @@ https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Optimization.
 4. **libLBFGS**: Optimization using **Rcpp** and **libLBFGS** library.  To make the library available for **Rcpp**, please put `#include<Rcpp.h>` in the file **lbfgsKernel.c**.
 
 Comparison.  A: exactly, B: kind of, C: haha no
+
 | Method        | Easy-to-code | Fast | 
 | ------------- | ------------ | ---- |
 | **OBJ_R**     | A | C |
