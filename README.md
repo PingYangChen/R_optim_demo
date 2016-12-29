@@ -3,10 +3,10 @@
 ### Preliminary
 R Package reauired: Rcpp, rbenchmark
 
-Three objective functions are used here which is controlled by \code{funIdx} in \code{objfun_r} and \code{objfun_cpp}.
-+ 0: Booth's function: $f(x,y)=(x + 2y -7)^2+(2x + y -5)^2$
-+ 1: Matyas function: $0.26(x^2+y^2)-0.48xy$
-+ 2: Sphere function: $\sum_{i=1}^n x_i^2$
+Three objective functions are used here which is controlled by `funIdx` in `objfun_r` and `objfun_cpp`.
++ `funIdx = 0`: Booth's function: \(f(x,y)=(x + 2y -7)^2+(2x + y -5)^2\)
++ `funIdx = 1`: Matyas function: \(0.26(x^2+y^2)-0.48xy\)
++ `funIdx = 2`: Sphere function: \(\sum_{i=1}^n x_i^2\)
 
 
 
